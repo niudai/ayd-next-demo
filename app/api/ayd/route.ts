@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      secretKey: "60de1ca132cd5237da1761cb3d10be94",
+      secretKey: "449fadb927d17c795198602d08c75d55",
       name: "Sheldon",
       email: "niudai.geek@gmail.com"
     }),
