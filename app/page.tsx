@@ -22,10 +22,10 @@ export default function Home() {
     <main>
       <iframe
         className="mx-auto"
-        sandbox="allow-scripts allow-same-origin allow-presentation allow-forms allow-popups allow-downloads allow-storage-access-by-user-activation"
         style={{
-          height: 640,
-          width: 400,
+          height: "100vh",
+          width: "100vw",
+          border: "none", // 可选，去掉边框
         }}
         src={iframeUrl}
       ></iframe>

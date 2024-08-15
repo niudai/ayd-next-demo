@@ -6,15 +6,16 @@ export const dynamic = "force-dynamic";
 
 export async function POST(req: NextRequest) {
 
-  const { url } = await fetch("https://www.askyourdatabase.com/api/chatbot/session", {
+  const { url } = await fetch("https://www.askyourdatabase.com/api/chatbot/v2/session", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${process.env.AYD_API_KEY}`
     },
     body: JSON.stringify({
-      secretKey: "449fadb927d17c795198602d08c75d55",
-      name: "Sheldon",
-      email: "niudai.geek@gmail.com"
+      "chatbotid": process.env.AYD_CHATBOT_ID,
+      "name": "Sheldon",
+      "email": "test@gmail.com"
     }),
   }).then((res) => res.json());
 
